@@ -1,0 +1,18 @@
+﻿<script src="https://<elqdomain type=2/>/i/livevalidation_standalone.compressed.js" type="text/javascript"></script>
+<script type="text/javascript">
+	window.onload = function() {
+		try {
+			var field1 = new LiveValidation("field1", {validMessage: "", onlyOnBlur: true});
+			field1.add(Validate.Presence, {failureMessage:"This field is required"});
+			var field2 = new LiveValidation("field2", {validMessage: "", onlyOnBlur: true});
+			field2.add(Validate.Presence, {failureMessage:"This field is required"});
+			var field3 = new LiveValidation("field3", {validMessage: "", onlyOnBlur: true});
+			field3.add(Validate.Presence, {failureMessage:"This field is required"});
+			field3.add(Validate.Format, {pattern: /^[ ]*([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})[ ]*$/i, failureMessage: "A valid email address is required"});
+			var field4 = new LiveValidation("field4", {validMessage: "", onlyOnBlur: true});
+			field4.add(Validate.Presence, {failureMessage:"This field is required"});
+			var field5 = new LiveValidation("field5", {validMessage: "", onlyOnBlur: true});
+			field5.add(Validate.Presence, {failureMessage:"This field is required"});
+		} catch(e) {}
+	};
+</script>
